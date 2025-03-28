@@ -1,0 +1,20 @@
+# rosdep update and source the ROS setup file
+# rosdep update && source /opt/ros/noetic/setup.bash
+
+# fix issues
+#  - https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/399
+#  - https://stackoverflow.com/questions/59790350/qstandardpaths-xdg-runtime-dir-not-set-defaulting-to-tmp-runtime-aadithyasb
+export XDG_RUNTIME_DIR=~/xdg_runtime
+sudo ldconfig
+# For using cmake via sudo
+RUN export PATH="/home/$USERNAME/.local/bin:$PATH"
+# For using onnxruntime
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+# For using openvino
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+# For using libtorch
+# export LD_LIBRARY_PATH=/libtorch/lib:$LD_LIBRARY_PATH
+
+# source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+# . /usr/share/gazebo/setup.sh

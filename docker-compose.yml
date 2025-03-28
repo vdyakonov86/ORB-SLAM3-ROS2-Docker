@@ -1,7 +1,7 @@
 version: "3"
 services:
   orb_slam3_22_humble:
-    image: orb-slam3-humble:22.04
+    image: orb-slam3
     volumes:
       #full dev
       - /dev:/dev:rw
@@ -15,6 +15,9 @@ services:
       - ./ros_env_vars.sh:/root/ros_env_vars.sh
       - ./orb_slam3_ros2_wrapper/:/root/colcon_ws/src/orb_slam3_ros2_wrapper/
       - ./orb_slam3_map_generator/:/root/colcon_ws/src/orb_slam3_map_generator/
+      - ./yolo-inference/:/root/colcon_ws/src/yolo-inference/
+      - ./onnxruntime/:/onnxruntime/
+      - ./openvino_toolkit/:/openvino_toolkit/
       - ./slam_msgs/:/root/colcon_ws/src/slam_msgs/
       - ./ORB_SLAM3/:/home/orb/ORB_SLAM3/
     privileged: true

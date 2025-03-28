@@ -1,2 +1,7 @@
 [safe]
 	directory = /home/orb/ORB_SLAM3
+[user]
+	email = vdyakonov86@yandex.ru
+	name = Vadim Dyakonov
+[credential]
+	helper = "!f() { /root/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node /tmp/vscode-remote-containers-6f23f020-9f34-4fbe-8341-afa7e5733f01.js git-credential-helper $*; }; f"

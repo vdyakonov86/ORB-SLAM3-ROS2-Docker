@@ -19,6 +19,7 @@ def generate_launch_description():
 
     #Essential_paths
     orb_wrapper_pkg = get_package_share_directory('orb_slam3_ros2_wrapper')
+    print("ORB_WRAPPER_PKG: ", orb_wrapper_pkg)
 #---------------------------------------------
 
     # LAUNCH ARGS

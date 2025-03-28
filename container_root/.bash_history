@@ -498,3 +498,66 @@ ls
 tmux
 ls
 ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py 
+xeyes
+exit
+xeyes
+exit
+ls
+ls /
+exit
+ls
+pwd
+ls /
+exit
+ld
+ls
+cd colcon_ws/src/yolo-inference/build/
+sudo cmake --install .
+ls
+cd colcon_ws/src/yolo-inference/build/
+cmake ..
+cmake --install .
+cd ~
+cat /home/orb/ORB_SLAM3/CMakeLists.txt 
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd colcon_ws/src/yolo-inference/
+sudo cmake --install .
+cd build/
+sudo cmake --install .
+export XDG_RUNTIME_DIR=~/xdg_runtime
+sudo ldconfig
+RUN export PATH="/home/$USERNAME/.local/bin:$PATH"
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+sudo apt remove -y cmake && pip install cmake && export PATH=/usr/local/bin:$PATH
+ros2 launch
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 
+source install/setup.
+source install/setup.bash 
+echo $PATH
+ls /opt/ros/humble/bin/
+exit
+sudo dpkg -r --force-depends cmake
+pip install cmake
+source ~/.bashrc 
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ln -s /usr/local/bin/cmake /usr/bin/cmake
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py 
+cd /home/orb/ORB_SLAM3/Thirdparty/Sophus/build/
+sudo cmake --install .
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py 
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+cd /root/colcon_ws/ && colcon build --symlink-install --verbose && source install/setup.bash
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash >> err.txt
+cd /root/colcon_ws/ && colcon build --symlink-install >> err.txt
+clear
+rm err.txt 
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+exit

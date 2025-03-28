@@ -43,6 +43,7 @@ sudo chmod +x container_root/shell_scripts/docker_install.sh
 Launch the container using steps in (4).
 ```bash
 cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
 cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
 ```
 
