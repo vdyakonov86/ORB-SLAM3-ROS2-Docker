@@ -35,6 +35,16 @@ namespace ORB_SLAM3_Wrapper
             Eigen::Translation3f(initialRobotPose_.position.x, initialRobotPose_.position.y, initialRobotPose_.position.z) *
             Eigen::Quaternionf(initialRobotPose_.orientation.w, initialRobotPose_.orientation.x, initialRobotPose_.orientation.y, initialRobotPose_.orientation.z));
         std::cout << "Robot X: " << initialRobotPose_.position.x << " Robot Y: " << initialRobotPose_.position.y << std::endl;
+        
+        auto backend_type = Backend_Type(atoi("3"));//Backend_Type(atoi(argv[5]))
+        auto task_type = Task_Type(atoi("2"));//Task_Type(atoi(argv[6]))
+        auto algo_type = Algo_Type(atoi("6"));//Algo_Type(atoi(argv[7]))
+        auto device_type = Device_Type(atoi("0"));//Device_Type(atoi(argv[8]))
+        auto model_type = Model_Type(atoi("0"));//Model_Type(atoi(argv[8]))
+        std::string model_path = "/yolo-inference//weights/yolov11n_seg_fp32.onnx";
+        
+        yolo_ = CreateFactory::instance().create(backend_type, task_type);
+        yolo_->init(algo_type, device_type, model_type, model_path);
     }
 
     ORBSLAM3Interface::~ORBSLAM3Interface()
@@ -518,9 +528,13 @@ namespace ORB_SLAM3_Wrapper
         }
         bufMutex_.unlock();
         if (imuBuf_.size() > 0)
-        {
+        {   
+            // yolo_->infer(cvRGB->image, false, false);
+            // auto seg_result = yolo_->m_output_seg;
+
+            std::vector<OutputSeg> seg_result;
             // track the frame.
-            Tcw = mSLAM_->TrackRGBD(cvRGB->image, cvD->image, typeConversions_->stampToSec(msgRGB->header.stamp), vImuMeas);
+            Tcw = mSLAM_->TrackRGBD(seg_result,cvRGB->image, cvD->image, typeConversions_->stampToSec(msgRGB->header.stamp), vImuMeas);
             auto currentTrackingState = mSLAM_->GetTrackingState();
             auto orbLoopClosing = mSLAM_->GetLoopClosing();
             if (loopClosing_ && orbLoopClosing->mergeDetected())
@@ -582,8 +596,14 @@ namespace ORB_SLAM3_Wrapper
             std::cerr << "cv_bridge exception D!" << endl;
             return false;
         }
+        
+        yolo_->infer(cvRGB->image, false, false);
+        auto seg_result = yolo_->m_output_seg;
+        // std::vector<OutputSeg> seg_result;
+        
         // track the frame.
-        Tcw = mSLAM_->TrackRGBD(cvRGB->image, cvD->image, typeConversions_->stampToSec(msgRGB->header.stamp));
+        Tcw = mSLAM_->TrackRGBD(seg_result,cvRGB->image, cvD->image, typeConversions_->stampToSec(msgRGB->header.stamp));
+        std::cout << "AFTER TrackRGBD" << std::endl;
         auto currentTrackingState = mSLAM_->GetTrackingState();
         auto orbLoopClosing = mSLAM_->GetLoopClosing();
         if (loopClosing_ && orbLoopClosing->mergeDetected())

@@ -67,49 +67,49 @@ RUN apt-get update \
 # ===== YOLO 11 =====
 # ultralytics install
 # Set environment variables
-ENV PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=1 \
-    PIP_BREAK_SYSTEM_PACKAGES=1
+# ENV PYTHONUNBUFFERED=1 \
+#     PYTHONDONTWRITEBYTECODE=1 \
+#     PIP_NO_CACHE_DIR=1 \
+#     PIP_BREAK_SYSTEM_PACKAGES=1
 
-# Downloads to user config dir
-ADD https://github.com/ultralytics/assets/releases/download/v0.0.0/Arial.ttf \
-    https://github.com/ultralytics/assets/releases/download/v0.0.0/Arial.Unicode.ttf \
-    /root/.config/Ultralytics/
+# # Downloads to user config dir
+# ADD https://github.com/ultralytics/assets/releases/download/v0.0.0/Arial.ttf \
+#     https://github.com/ultralytics/assets/releases/download/v0.0.0/Arial.Unicode.ttf \
+#     /root/.config/Ultralytics/
 
-# Install linux packages
-# g++ required to build 'tflite_support' and 'lap' packages, libusb-1.0-0 required for 'tflite_support' package
-RUN apt-get install -y --no-install-recommends \
-    htop libgl1 libglib2.0-0 libpython3-dev gnupg g++ libusb-1.0-0 
+# # Install linux packages
+# # g++ required to build 'tflite_support' and 'lap' packages, libusb-1.0-0 required for 'tflite_support' package
+# RUN apt-get install -y --no-install-recommends \
+#     htop libgl1 libglib2.0-0 libpython3-dev gnupg g++ libusb-1.0-0 
 
-# Create working directory
-WORKDIR /ultralytics
+# # Create working directory
+# WORKDIR /ultralytics
 
-# Copy contents and configure git
-COPY ultralytics .
-ADD https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt .
+# # Copy contents and configure git
+# COPY ultralytics .
+# ADD https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt .
 
-# Install pip packages
-RUN pip install uv
-RUN uv pip install --system -e ".[export]" --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-first-match
+# # Install pip packages
+# RUN pip install uv
+# RUN uv pip install --system -e ".[export]" --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-first-match
 
-# Run exports to AutoInstall packages
-RUN yolo export model=tmp/yolo11n.pt format=edgetpu imgsz=32
-RUN yolo export model=tmp/yolo11n.pt format=ncnn imgsz=32
-# Requires Python<=3.10, bug with paddlepaddle==2.5.0 https://github.com/PaddlePaddle/X2Paddle/issues/991
-RUN uv pip install --system "paddlepaddle>=2.6.0" x2paddle
+# # Run exports to AutoInstall packages
+# RUN yolo export model=tmp/yolo11n.pt format=edgetpu imgsz=32
+# RUN yolo export model=tmp/yolo11n.pt format=ncnn imgsz=32
+# # Requires Python<=3.10, bug with paddlepaddle==2.5.0 https://github.com/PaddlePaddle/X2Paddle/issues/991
+# RUN uv pip install --system "paddlepaddle>=2.6.0" x2paddle
 
-# Remove extra build files
-RUN rm -rf tmp /root/.config/Ultralytics/persistent_cache.json
+# # Remove extra build files
+# RUN rm -rf tmp /root/.config/Ultralytics/persistent_cache.json
 
-WORKDIR /
+# WORKDIR /
 
 # jupyter
-RUN pip install ipython ipykernel
+# RUN pip install ipython ipykernel
 
 # ===== ORB-SLAM3 =====
 # prerequisites
-RUN apt-get install -y cmake g++
+RUN apt-get install -y g++
 
 # Pangolin
 RUN git clone --recursive https://github.com/stevenlovegrove/Pangolin.git 
@@ -152,9 +152,9 @@ RUN wget -O eigen.zip https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.
 # Deps to fix opencv error when run orb-slam3
 RUN apt-get install -y libgtk2.0-dev pkg-config
 # download and unpack sources
-RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip \
+RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/4.9.0.zip \
 && unzip opencv.zip \
-&& mv opencv-4.4.0 opencv \
+&& mv opencv-4.9.0 opencv \
 && rm opencv.zip
 
 # build

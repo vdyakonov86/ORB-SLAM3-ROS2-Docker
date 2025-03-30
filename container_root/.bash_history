@@ -561,3 +561,244 @@ clear
 rm err.txt 
 cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
 exit
+source colcon_ws/install/setup.bash 
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+exit
+ls /home
+pwd
+cd ~
+pwd
+cd /home/ubuntu/
+source .bashrc 
+echo $LD_LIBRARY_PATH 
+cd ~
+pwd
+ls
+echo $LD_LIBRARY_PATH 
+source ~/.bashrc 
+echo $LD_LIBRARY_PATH 
+source /home/ubuntu/.bashrc
+echo $LD_LIBRARY_PATH 
+cd colcon_ws/src/yolo-inference/build/
+sudo cmake --install .
+code /home/orb/ORB_SLAM3/Examples/RGB-D/rgbd_tum_yolo.cc 
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+clear
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+cmake --version
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ls /home/orb/ORB_SLAM3/
+cd /home/orb/ORB_SLAM3/
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 2 2 6 0 0 /root/colcon_ws/src/yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 2 2 6 0 0 /root/colcon_ws/src/yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 2 2 6 0 0 /root/colcon_ws/src/yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+exti
+cd colcon_ws/src/yolo-inference/bu
+cd colcon_ws/src/yolo-inference/build/
+ls
+sudo cmake --install .
+ls
+ls CMakeFiles/
+pwd
+ls ..
+source colcon_ws/install/setup.bash 
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py 
+code .
+exit
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/src/yolo-inference/build/
+cmake ..
+sudo cmake --install .
+source /home/ubuntu/.bashrc 
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo apt remove cmake
+exit
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+exit
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+cd colcon_ws/src/yolo-inference/
+sudo rm -r build
+mkdir build 
+cd build
+cmake ..
+cmake --build .
+sudo cmake --install . 
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo apt install cmake
+which cmake
+ln -s /usr/local/bin/cmake /usr/bin/cmake
+ln -sf /usr/local/bin/cmake /usr/bin/cmake
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+exit
+which cmake
+sudo cmake --install colcon_ws/src/yolo-inference/build
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo rm -r /root/colcon_ws/install/
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+echo $LD_LIBRARY_PATH 
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+exit
+sudo cmake --install /yolo-inference/build
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+pip uninstall cmake
+sudo dpkg -r --force-depends cmake && pip install cmake=3.5 && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+sudo dpkg -r --force-depends cmake && pip install cmake==3.5 && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+sudo dpkg -r --force-depends cmake && pip install cmake==3.3 && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+sudo dpkg -r --force-depends cmake && pip install cmake==3.31.6 && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
+ln -sf /usr/local/bin/cmake /usr/bin/cmake
+cmake
+cmake --version
+cd /
+cd yolo-inference/
+sudo rm -r build
+mkdir build && cd build
+ls
+cmake ..
+cmake --build .
+sudo cmake --install .
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+cd /yolo-inference/bu
+cd /yolo-inference/build/
+cmake ..
+cmake --build .
+cat ../include/yolo-inference/yolo.h 
+clear
+sudo cmake --install .
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+xeyes 
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 2 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+rm /usr/bin/cmake 
+sudo apt install cmake
+cmake --version
+which cmake
+pip show cmake
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 2 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+ls
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo cmake --install /yolo-inference/build/
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+which cmake
+pip show cmake
+pip install cmake
+pip install cmake==
+pip install cmake
+pip show cmake
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+cd /home/orb/ORB_SLAM3/
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+sudo cmake --install /yolo-inference/build/
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+pip install cmake
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+clear
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+exit
+cmake
+exit
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+sudo cmake --install /yolo-inference/build/
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /yolo-inference/build/
+cmake ..
+sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -sf /usr/local/bin/cmake /usr/bin/cmake
+cmake ..
+cd /yolo-inference/
+cd build/
+cmake ..
+cmake --build .
+sudo cmake install .
+sudo cmake -- install .
+sudo cmake --install .
+sudo apt install -y cmake
+which cmake
+ln -s /usr/local/bin/cmake /usr/bin/cmake
+ln -sf /usr/local/bin/cmake /usr/bin/cmake
+cmake --version
+pip uninstall cmake
+ln -sf /usr/local/bin/cmake /usr/bin/cmake
+cmake --version
+which cmake
+sudo apt install -y cmake
+which cmake
+ln -sf /usr/bin/cmake 
+ls
+rm cmake
+cmake
+dpkg cmake
+dpkg -L cmake
+/usr/bin/cmake
+exit
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+sudo cmake --install /yolo-inference/build
+cd /home/orb/ORB_SLAM3/
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
+pip install cmake==3.23
+pip install cmake==3.23.3
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+clear
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+exit

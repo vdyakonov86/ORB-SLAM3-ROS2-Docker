@@ -32,6 +32,8 @@
 #include "orb_slam3_ros2_wrapper/type_conversion.hpp"
 #include "orb_slam3_ros2_wrapper/time_profiler.hpp"
 
+#include<yolo-inference/yolo.h>
+
 namespace ORB_SLAM3_Wrapper
 {
     class ORBSLAM3Interface
@@ -137,6 +139,7 @@ namespace ORB_SLAM3_Wrapper
         std::string robotFrame_;
 
         TimeProfiler* time_profiler_;
+        std::unique_ptr<YOLO> yolo_;
     };
 }
 

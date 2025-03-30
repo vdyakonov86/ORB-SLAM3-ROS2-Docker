@@ -7,7 +7,7 @@
 export XDG_RUNTIME_DIR=~/xdg_runtime
 sudo ldconfig
 # For using cmake via sudo
-RUN export PATH="/home/$USERNAME/.local/bin:$PATH"
+# RUN export PATH="/home/$USERNAME/.local/bin:$PATH"
 # For using onnxruntime
 export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
 # For using openvino

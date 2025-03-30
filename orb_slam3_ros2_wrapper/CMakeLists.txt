@@ -44,6 +44,7 @@ find_package(PCL REQUIRED)
 find_package(pcl_ros REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(std_srvs REQUIRED)
+find_package(yoloInference REQUIRED)
 
 include_directories(
   include
@@ -72,7 +73,7 @@ ament_target_dependencies(rgbd rclcpp sensor_msgs cv_bridge message_filters ORB_
 # ament_target_dependencies(rgbd rclcpp sensor_msgs cv_bridge message_filters ORB_SLAM3 Pangolin tf2_ros tf2_eigen slam_msgs pcl_ros pcl_conversions PCL nav_msgs)
 # ament_target_dependencies(test1 rclcpp sensor_msgs cv_bridge message_filters ORB_SLAM3 Pangolin tf2_ros tf2_eigen slam_msgs pcl_ros pcl_conversions PCL nav_msgs)
 # test1
-target_link_libraries(rgbd ${PCL_LIBRARIES})
+target_link_libraries(rgbd ${PCL_LIBRARIES} yoloInference::yoloInference)
 install(TARGETS rgbd
   DESTINATION lib/${PROJECT_NAME})
 

@@ -46,6 +46,13 @@ cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
 sudo dpkg -r --force-depends cmake && pip install cmake && source ~/.bashrc && ln -s /usr/local/bin/cmake /usr/bin/cmake
 cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
 ```
+export LD_LIBRARY_PATH=/onnxruntime/lib:$LD_LIBRARY_PATH
+sudo -E /openvino_toolkit/install_dependencies/install_openvino_dependencies.sh
+source /openvino_toolkit/setupvars.sh
+
+./Examples/RGB-D/rgbd_tum ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt fr3_sitting_xyz
+
+./Examples/RGB-D/rgbd_tum_yolo ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/TUM1.yaml ./Datasets/TUM/rgbd_dataset_freiburg3_sitting_xyz ./Examples/RGB-D/associations/fr3_sitting_xyz.txt 3 2 6 0 0 /yolo-inference/weights/yolov11n_seg_fp32.onnx fr3_sitting_xyz
 
 ## Launching ORB-SLAM3
 
